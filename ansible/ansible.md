@@ -12,6 +12,7 @@ __ohrassertToken: "{{ lookup('ansible.builtin.file', '~/.vault-token', errors='i
 
 ## BLOCK
   * on ne peut utiliser les blocks que dans des tasks, pas dans un role !
+  
   exemple, ceci ne marche pas
   ```
   roles:
@@ -27,6 +28,7 @@ __ohrassertToken: "{{ lookup('ansible.builtin.file', '~/.vault-token', errors='i
       ignore_errors: yes
   ```
   Il faut utiliser : 
+  
   ```
     tasks:
     - name: Assertion with collection
